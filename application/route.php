@@ -33,6 +33,7 @@ Route::post('api/:version/token/verify', 'api/:version.Token/verifyToken');
 //Address
 Route::post('api/:version/address', 'api/:version.Address/createOrUpdateAddress');
 Route::get('api/:version/address', 'api/:version.Address/getUserAddress');
+Route::get('api/:version/test', 'api/:version.Address/test');
 
 //Order
 //不想把所有查询都写在一起，所以增加by_user，很好的REST与RESTFul的区别

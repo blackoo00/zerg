@@ -78,6 +78,10 @@ class BaseValidate extends Validate
             if(!is_array($arrays[$key]) && strpos($arrays[$key],config('setting.img_prefix')) !== false){
                 $arrays[$key] = str_replace(config('setting.img_prefix'),'',$arrays[$key]);
             }
+            if(!is_array($arrays[$key]) && $key !='details' && strpos($arrays[$key],config('setting.tencent_cloud_prefix')) !== false){
+                $arrays[$key] = str_replace(config('setting.tencent_cloud_prefix'),'',$arrays[$key]);
+                $newArray['from'] = config('setting.tencent_cloud_from');
+            }
             $newArray[$key] = $arrays[$key];
         }
         return $newArray;

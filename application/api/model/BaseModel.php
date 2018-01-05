@@ -12,6 +12,9 @@ class BaseModel extends Model
         if($data['from'] == 1){
             $finalUrl = config('setting.img_prefix').$value;
         }
+        if($data['from'] == config('setting.tencent_cloud_from')){
+            $finalUrl = config('setting.tencent_cloud_prefix').$value;
+        }
         return $finalUrl;
     }
 }

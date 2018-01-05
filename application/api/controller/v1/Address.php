@@ -30,6 +30,10 @@ class Address extends BaseController
      * @throws UserException
      */
 
+    public function test(){
+        return 1;
+    }
+
     public function getUserAddress(){
         $uid = TokenService::getCurrentUid();
         $userAddress = UserAddress::where('user_id',$uid)->find();
@@ -40,7 +44,6 @@ class Address extends BaseController
             ]);
         }
         return $userAddress;
-
     }
 
     public function createOrUpdateAddress(){
