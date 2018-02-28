@@ -36,6 +36,8 @@ class TxFile
         $res = self::upload($temp_src,$image->type());
         return $res['data']['source_url'];
     }
+
+
     public function upload($src,$suffix = 'jpg'){
         $cosApi = new Api($this->config);
         $cat_name = date('Y').date('m').date('d');
@@ -43,6 +45,15 @@ class TxFile
         $res = $cosApi->upload($this->bucket, $src, $dst);
         return $res;
     }
+
+//    public function upload2($con,$suffix = 'jpg'){
+//        $cosApi = new Api($this->config);
+//        $cat_name = date('Y').date('m').date('d');
+//        $dst = $cat_name . '/' . time().rand(0,100).'.'.$suffix;
+//        $res = $cosApi->uploadBuffer($this->bucket, $con, $dst);
+//        return $res;
+//    }
+
     public function getSign(){
         $cosApi = new Api($this->config);
         $sign = $cosApi->getSignature($this->bucket);

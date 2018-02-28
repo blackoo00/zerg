@@ -7,11 +7,9 @@
  */
 
 namespace app\api\controller\v1;
-
-
 use app\api\controller\BaseController;
-use app\api\validate\UserInfo;
 use app\api\model\User as UserModel;
+use app\api\validate\UserInfo;
 use app\lib\exception\SuccessMessage;
 
 class User extends BaseController

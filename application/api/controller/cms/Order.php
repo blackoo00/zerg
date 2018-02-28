@@ -10,6 +10,7 @@ namespace app\api\controller\cms;
 
 use app\api\controller\BaseController;
 use app\api\model\Order as OrderModel;
+use app\api\validate\IDMustBePostiveInt;
 
 class Order extends BaseController
 {
@@ -46,5 +47,10 @@ class Order extends BaseController
     public function getList($page = 1, $size = 10, $key = '')
     {
         return OrderModel::getSummaryByPage($page, $size, $key);
+    }
+
+    public function getDetail($id){
+        (new IDMustBePostiveInt())->goCheck();
+        return OrderModel::getOrderDetail($id);
     }
 }

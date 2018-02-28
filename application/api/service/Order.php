@@ -189,6 +189,7 @@ class Order
             'haveStock' => false,
             'count' => 0,
             'name' => '',
+            'main_img_url' => '',
             'totalPrice' => 0
         ];
 
@@ -207,6 +208,7 @@ class Order
             $pStatus['id'] = $product['id'];
             $pStatus['count'] = $oCount;
             $pStatus['name'] = $product['name'];
+            $pStatus['main_img_url'] = $product['main_img_url'];
             $pStatus['totalPrice'] = $product['price'] * $oCount;
             if($product['stock'] - $oCount >= 0){
                 $pStatus['haveStock'] = true;

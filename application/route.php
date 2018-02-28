@@ -70,6 +70,7 @@ Route::group('api/cms/order',function (){
     Route::get('/static','api/cms.Order/statistic');
     Route::get('/list','api/cms.Order/getList');
     Route::post('/test','api/cms.Order/test');
+    Route::post('/:id','api/cms.Order/getDetail', [], ['id' => '\d+']);
 });
 Route::group('api/cms/cats',function (){
     Route::get('/list','api/cms.Category/getList');

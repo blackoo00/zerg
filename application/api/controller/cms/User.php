@@ -10,6 +10,7 @@ namespace app\api\controller\cms;
 
 use app\api\controller\BaseController;
 use \app\api\model\User as UserModel;
+use app\api\service\UserToken;
 
 class User extends BaseController
 {

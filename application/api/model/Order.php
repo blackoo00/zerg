@@ -44,4 +44,8 @@ class Order extends BaseModel
             ->paginate($size,false,['page' => $page]);
         return $pagingData;
     }
+
+    public static function getOrderDetail($id){
+        return self::get($id);
+    }
 }
