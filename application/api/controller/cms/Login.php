@@ -19,12 +19,15 @@ class Login
      * @url /app_token?
      * @POST ac=:ac se=:secret
      */
-    public function getAppToken($ac = '', $se = ''){
+    public function getAppToken($ac = '', $se = '', $type = ''){
         (new AppTokenGet())->goCheck();
         $app = new AppToken();
         $token = $app->get($ac,$se);
         return [
-            'token' => $token
+            'token' => $token,
+            'status' => 'ok',
+            'currentAuthority' => 'admin',
+            'type' => $type
         ];
     }
 }

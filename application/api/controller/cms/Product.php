@@ -19,9 +19,9 @@ use app\api\service\TxFile as TxFileService;
 
 class Product extends BaseController
 {
-    protected $beforeActionList = [
-        'checkPrimaryScope' => ['only' => 'statistic,getList,getDetail']
-    ];
+    // protected $beforeActionList = [
+    //     'checkPrimaryScope' => ['only' => 'statistic,getList,getDetail']
+    // ];
 
     public function statistic(){
         $product = new ProductModel();

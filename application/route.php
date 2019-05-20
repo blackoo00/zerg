@@ -54,6 +54,7 @@ Route::post('api/:version/pay/re_notify', 'api/:version.Pay/redirectNotify');
 Route::post('api/:version/user/wx_info', 'api/:version.User/updateUserInfo');
 
 //CMS
+Route::get('api/cms/home_data','api/cms.Statistics/getData');
 Route::group('api/cms/user',function (){
     Route::get('/static','api/cms.User/statistic');
     Route::get('/list','api/cms.User/getList');

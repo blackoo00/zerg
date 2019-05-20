@@ -14,9 +14,9 @@ use app\api\validate\IDMustBePostiveInt;
 
 class Order extends BaseController
 {
-    protected $beforeActionList = [
-        'checkPrimaryScope' => ['only' => 'statistic,getList']
-    ];
+    // protected $beforeActionList = [
+    //     'checkPrimaryScope' => ['only' => 'statistic,getList']
+    // ];
 
     public function test()
     {

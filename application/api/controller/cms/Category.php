@@ -14,9 +14,9 @@ use app\api\model\Category as CategoryModel;
 
 class Category extends BaseController
 {
-    protected $beforeActionList = [
-        'checkPrimaryScope' => ['only' => 'statistic,getList']
-    ];
+    // protected $beforeActionList = [
+    //     'checkPrimaryScope' => ['only' => 'statistic,getList']
+    // ];
 
     public function getList($page = 1, $size = 10){
         $pagingCats = CategoryModel::getSummaryByPage($page,$size);
