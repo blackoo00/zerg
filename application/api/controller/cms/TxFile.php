@@ -9,7 +9,7 @@
 namespace app\api\controller\cms;
 
 use app\api\controller\BaseController;
-use app\api\service\TxFile as TxFileService;
+use app\api\service\TxFile2 as TxFileService;
 
 class TxFile extends BaseController
 {
@@ -18,6 +18,10 @@ class TxFile extends BaseController
             'only' => 'getSign,uploadThumbImg'
         ]
     ];
+
+    public function test(){
+        (new TxFileService())->upload();
+    }
 
     public function getSign(){
         return (new TxFeileService())->getSign();

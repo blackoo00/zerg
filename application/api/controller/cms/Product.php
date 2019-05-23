@@ -51,7 +51,9 @@ class Product extends BaseController
 
     public function uploadProductLogo(){
         $res = (new TxFileService())->thumbUpload($_FILES[array_keys($_FILES)[0]]['tmp_name']);
-        return stripslashes($res);
+        $data = array();
+        $data['url']= stripslashes($res);
+        return $data;
     }
 
     public function uploadProductDetailsImg(){

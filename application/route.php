@@ -55,6 +55,8 @@ Route::post('api/:version/user/wx_info', 'api/:version.User/updateUserInfo');
 
 //CMS
 Route::get('api/cms/home_data','api/cms.Statistics/getData');
+Route::get('api/cms/test','api/cms.TxFile/test');
+
 Route::group('api/cms/user',function (){
     Route::get('/static','api/cms.User/statistic');
     Route::get('/list','api/cms.User/getList');

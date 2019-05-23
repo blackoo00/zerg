@@ -19,7 +19,9 @@
         "php": ">=5.4.0",
         "topthink/framework": "^5.0",
         "topthink/think-worker": "^1.0",
-        "workerman/workerman-for-win": "^3.5"
+        "workerman/workerman-for-win": "^3.5",
+        "topthink/think-image": "^1.0",
+        "qcloud/cos-sdk-v5": ">=1.0"
     },
     "extra": {
         "think-path": "thinkphp"
